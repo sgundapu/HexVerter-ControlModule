@@ -67,9 +67,11 @@ public class HexverterController {
 			if (event.isRXCHAR()) {
 				try {
 					byte buffer[] = serialPort.readBytes();
-					for (byte b : buffer) {
-						System.out.print((char) b);
-						log.write(b);
+					if (buffer!=null){
+						for (byte b : buffer) {
+							System.out.print((char) b);
+							log.write(b);
+						}
 					}
 				} catch (SerialPortException ex) {
 					System.err.println(ex);
