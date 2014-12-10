@@ -23,7 +23,7 @@ public class HexverterController {
 
 		// Set this value to address of port number where XBee explorer dongle
 		// is connected
-		serialPort = new SerialPort("COM6");
+		serialPort = new SerialPort("/dev/tty.usbserial-DA00T2QK");
 		try {
 			// Create a log file to log all the received data
 			FileWriter fstream = new FileWriter("log.txt", true);
